@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bear.mapper.TestMapper">
+    <insert id="insertData">
+        insert into dr_research_authentication (user_id, status, is_use, research_avatar, nick_name,
+                                                identity_cards_head_url, city_code, city_name, service_area, identity_type,
+                                                company_name, apply_time, audit_time, has_deleted)
+        values (1111,1,1,null,'测试',null, 320500,'测试','[320500]',1,'测试',null,null,true)
+    </insert>
+
+    <select id="selectData" resultType="com.bear.model.ResearchAuthentication">
+        select * from dr_research_authentication
+    </select>
+</mapper>
