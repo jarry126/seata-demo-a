@@ -1,6 +1,7 @@
 package com.bear;
 
 import io.seata.spring.annotation.datasource.EnableAutoDataSourceProxy;
+import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +18,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableAutoDataSourceProxy
 @EnableFeignClients
 @MapperScan("com.bear.mapper")
+// 加入dubbo启动
+@EnableDubbo
+@DubboComponentScan
 public class SpringBootSeateDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootSeateDemoApplication.class, args);
